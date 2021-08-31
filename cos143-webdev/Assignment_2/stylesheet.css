@@ -1,0 +1,42 @@
+body{
+    background-color: #b1ddef;
+    background-image: url("meltedSnow.jpg");
+    background-size: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+h1 {
+    font-family: 'Merriweather', serif;
+    margin-left: 20px;
+    font-size: 400%;
+    color: #15039e;
+    position: relative;
+    text-align: right;
+}
+
+h2 {
+    font-family: 'Merriweather', serif;
+    margin-left: 20px;
+    font-size: 20px;
+    font-size: 200%;
+    text-align: right;
+    color: yellow;
+}
+
+p{
+    font-family: 'Slabo 27px', serif;
+    margin-left: 20px;
+    position: relative;
+    top: 300px;
+    font-size: 35px;
+}
+
+.bottom {
+    margin-top: 220px;
+    text-align: center;
+}

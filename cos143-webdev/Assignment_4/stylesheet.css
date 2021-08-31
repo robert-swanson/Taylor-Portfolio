@@ -1,0 +1,9 @@
+body{
+  background-image: url("https://c1.staticflickr.com/7/6020/5920122416_c35701abbd_b.jpg");
+  background-blend-mode: screen;
+  background-color: rgb(208, 102, 164);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}

@@ -1,0 +1,83 @@
+body{
+  font-family: 'Arbutus Slab', serif;
+  margin: 0px;
+  padding: 0px;
+  background-color: rgb(234, 239, 246);
+}
+#header{
+  background-color: rgb(73, 32, 131);
+  margin: 0px 0px 15px 0px;
+  color: white;
+  padding: 5px;
+}
+
+h1, h2{
+  text-align: center;
+}
+
+#line{
+  width: 10px;
+  height: 2000px;
+  background-color: rgb(129, 24, 24);
+  position: absolute;
+  left: 115px;
+  top: 10px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.event{
+  left: 100px;
+  position: absolute;
+  height: 40px;
+}
+
+.circle{
+  background-image: url("dot.svg");
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  transition: all .1s;
+}
+.circle:hover{
+  transform: scale(1.1);
+}
+
+.date{
+  position: absolute;
+  left: 50px;
+  font-size: 10px;
+  color: rgb(87, 87, 87);
+  width: 100px;
+  font-style: italic;
+
+  /* background-color: gray; */
+  bottom: 13.5px;
+}
+.summary{
+  position: absolute;
+  left: 140px;
+  font-size: 20px;
+  width: 500px;
+
+  /* background-color: gray; */
+  bottom: 7.5px;
+}
+
+#popup{
+  position: absolute;
+  right: 10%;
+  left: 50%;
+  margin: 0px;
+  text-align: center;
+  border-color: rgb(64, 7, 58);
+  border-width: 1px;
+  border-style: solid;
+  background-size: cover;
+}
+
+#textBack{
+  background-color: rgba(50, 40, 80, 0.56);
+  padding: 5px;
+}

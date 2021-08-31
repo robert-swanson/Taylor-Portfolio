@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Assignment 6</title>
+        <link rel="icon" href="../profile.ico"/>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+    <div id="breadcrumb" style="background-color: rgb(251, 200, 175); padding: 3px; top: 0px; left: 0px; right: 0px; position: absolute"><a href="../../">home</a> > Assignment 7</div><br>
+
+      <form id="form" action="https://cse.taylor.edu/~cos143/echoForm.php" method="get">
+        <h1>Print Poster</h1>
+        <label for="content">Poster Content</label><br>
+        <textarea name="content" id="content" rows="3" cols="50" placeholder="Enter Text Here"></textarea>
+        <br>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Passsword">
+        <br>
+        <select name="type" id="type">
+          <optgroup label="Paper/Cardstock">
+            <option value="paper">Paper ($0.35 per sq ft)</option>
+            <option value="cardstock">Cardstock ($0.79 per sq ft)</option>
+            <option value="posterboard">Poster Board ($1.45 per sq ft)</option>
+          </optgroup>
+          <optgroup label="Special Materials">
+            <option value="pine">Pine Wood ($3.00 per sq ft)</option>
+            <option value="aluminum">Aluminum ($4.15 per sq ft)</option>
+            <option value="pine">Plexiglass ($4.20 per sq ft)</option>
+          </optgroup>
+        </select>
+        <br>
+        <label for="width">Width</label>
+        <input type="number" name="width" id="width" min="6" max="64" value="12" placeholder="inches"> X
+        <label for="height">Heigth</label>
+        <input type="number" name="height" id="height" min="9" max="128" value="24" placeholder="inches (in)"> =
+        <input type="text" id="area" readonly value="288"> in<sup>2</sup>
+        <br>
+        <label for="phone">Phone Number</label>
+        <input type="tel" name="phone" id="phone">
+        <br>
+        <button type="submit">Next</button>
+      </form>
+    </body>
+</html>

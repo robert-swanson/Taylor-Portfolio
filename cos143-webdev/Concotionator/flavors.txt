@@ -1,0 +1,12 @@
+Water, Soda Water
+Juices (juices): Apple Juice, Orange Juice, Grape Juice, Cranberry Juice Cocktail
+Uncarbonated Sweet (sweet): Orange Gatorade, Fruit Punch Gatorade, Pink Lemonade, Strawberry Kiwi Enhanced Water, Tropical Mango Enhanced Water, Watermelon Enhanced Water, Blueberry Pomegranateacai Enhanced Water
+Teas (tea): Raspberry Iced Tea, Iced Tea (sweet), Iced Tea (unsweet)
+Hot Drinks (hot): Hot Chocolate, White Chocolate Caramel, Chai Tea Latte
+Ice Cream (icecream): Vanilla Ice Cream, Chocolate Ice Cream, Mixed Ice Cream
+Milks (milk): Vanilla Almond Milk, Original Almond Milk, Vanilla Soymilk, Chocolate Soymilk, Skim Milk, 2% Milk, Chocolate Milk
+Creamers (creamer): Hazelnut Creamer, French Vanilla Creamer
+Condiments (condiment): Ketchup, Mustard, Barbecue Sauce, Mayonnaise
+Sodas: Dr. Pepper, Diet Dr. Pepper, Pepsi, Diet Pepsi, Sierra Mist, Mountain Dew, Root Beer, Orange Crush
+Machine Bases: Raspberry Iced Tea, Sierra Mist, Mountain Dew, Tropicana Pink Lemonade, Dr. Pepper, Pepsi, Diet Pepsi, Diet Dr. Pepper, Root Beer, Orange Crush
+Additional Flavors: Cherry, Vanilla, Strawberry, Lime

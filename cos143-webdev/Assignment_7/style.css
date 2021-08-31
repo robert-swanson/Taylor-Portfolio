@@ -1,0 +1,30 @@
+textarea{
+  display: inline-block;
+}
+input[type="number"]{
+  width: 55px;
+}
+
+*{
+  transition: background-color .2s linear;
+}
+
+#area{
+  width: 30px;
+}
+
+.invalid{
+  background-color: rgb(191, 133, 112);
+  color: rgb(203, 236, 198);
+}
+
+.invalid::placeholder{
+  color: rgb(96, 188, 228);
+}
+
+input.invalid{
+  border: red 2px inset;
+}
+textarea.invalid{
+  border: red 1px solid;
+}

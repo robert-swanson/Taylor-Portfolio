@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="script.js" defer></script>
+    <script>
+      google.charts.load('current', {'packages': ['corechart']});
+    </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Stock Charts</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="../../">Home</a></li>
+          <li class="breadcrumb-item">Stocks</li>
+        </ol>
+      </nav>
+    </div>
+    <div class="row">
+      <h1>Stocks Assignemnt</h1>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <label for="tickerSymbol">Stock Symbol</label>
+        <input type="text" id="tickerSymbol" class="form-control" value="GOOG"/>
+        <br>
+
+        <label for="earliestDate">Earliest date</label>
+        <input type="date" id="earliestDate" class="form-control">
+        <br>
+
+        <label for="latestDate">Latest date</label>
+        <input type="date" id="latestDate" class="form-control">
+        <br>
+
+        <button class="btn btn-primary" data-toggle="tooltip" data-placement="right" title="Fetch Stocks" id="drawChart">Draw Chart</button>
+      </div>
+      <div class="col-md-8">
+        <div id="chart"></div>
+      </div>
+
+</body>
+</html>

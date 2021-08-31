@@ -1,0 +1,13 @@
+{
+  "name": "Hapi-Intro",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@hapi/hapi": "^18.4.0",
+    "blipp": "^4.0.1",
+    "hapi-pino": "^6.3.0",
+    "knex": "^0.20.1",
+    "pg": "^7.12.1"
+  }
+}

@@ -1,0 +1,15 @@
+break phase_1
+disable $bpnum
+break phase_2
+disable $bpnum
+break phase_3
+disable $bpnum
+break phase_4
+disable $bpnum
+break phase_5
+break phase_6
+break explode_bomb
+break read_six_numbers
+disable $bpnum
+break *0x5555555559d1
+break * 0x0000555555555f74

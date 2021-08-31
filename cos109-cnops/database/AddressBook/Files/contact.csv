@@ -1,0 +1,5 @@
+First_Name, Last_Name, Primary_Email, Secondary_Email, Primary_Phone, Secondary_Phone, Organization, Birthday, Notes
+Billy, School, example@foo.com, , 0, 0, , , 
+Robert, Swanson, firstEmail, secondEmail, 123, 321, Taylor, 12-11-99, Notes, Yeah!
+Timothy, Swanson, example@foo.com, , 0, 0, , , 
+Bobby, Work, example@foo.com, , 0, 0, , , 

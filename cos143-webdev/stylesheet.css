@@ -1,0 +1,52 @@
+h1{
+  font-family: 'Noto Serif', serif;
+  font-style: emphasis;
+  margin-left: 40px;
+}
+li{
+
+}
+li > a{
+
+}
+
+body{
+  font-family: 'ZCOOL XiaoWei', serif;
+  background: black;
+  color: white;
+  margin: 0px;
+}
+
+.subject{
+  padding: 5px 30px 5px 30px;
+  margin: 0px;
+}
+
+.subject > p > em{
+  margin-right: 30px;
+  position: absolute;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.subject > p > a{
+  color: rgb(110, 185, 255);
+  font-size: 30px;
+  position: relative;
+  left: 100px;
+}
+
+#COS143{
+  background-color: rgb(106, 41, 41);
+  color: white;
+}
+
+#conc{
+  background-color: rgb(161, 141, 55);
+}
+
+#colloquium{
+  background-color: rgb(13, 31, 125);
+  color: white;
+}

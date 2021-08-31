@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1621438175796.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2220824832",
+    "id" : "BF1F5A94",
+    "lastKnownWriteTime" : 1589810551,
+    "last_content_update" : 1589810551,
+    "path" : "~/dev/rswanson/mat311-data_science/HealthData/HealthData.R",
+    "project_path" : "HealthData.R",
+    "properties" : {
+        "cursorPosition" : "61,175",
+        "marks" : "<:0,23\n>:0,23",
+        "scrollLine" : "50"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

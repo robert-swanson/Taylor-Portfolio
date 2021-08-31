@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:github" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:github" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:github" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:github" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:cos243-multier_webdev" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:github" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:cos243-multier_webdev" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:Hapi-Intro" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:github" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:cos243-multier_webdev" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:RideSharePlatform" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:github" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:cos243-multier_webdev" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:RideSharePlatform" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:hapi" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="94e88970-77d5-4756-b6c0-0bdee593edb0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/java-src/scoring/condition/Condition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-src/scoring/context/FullPlanSubContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-src/scoring/context/subcontext/SubContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-src/scoring/context/subcontext/TermSubContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-src/scoring/context/subcontext/WeekSubContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-src/scoring/evaluation/Result.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-src/scoring/evaluation/Value.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-src/scoring/evaluation/result/DaysResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-src/scoring/evaluation/result/PlanResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-src/scoring/evaluation/result/TermsResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-src/objects/misc/Date.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-src/objects/misc/Date.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-src/objects/misc/Time.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-src/objects/misc/Time.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-src/scoring/Value.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-src/scoring/ValueStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-src/scoring/ValueStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-src/scoring/context/Context.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-src/scoring/context/Context.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-src/scoring/context/DaysContext.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-src/scoring/context/FullPlanContext.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-src/scoring/context/TermsContext.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-src/scoring/evaluation/ContextEvaluator.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-src/scoring/evaluation/ContextEvaluator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-src/scoring/evaluation/TotalCreditsEvaluator.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-src/scoring/evaluation/TotalCreditsEvaluator.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="1riUGBLMYxaqF3jQlFpx9hCNLnP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="scoring.context" />
+      <recent name="objects" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="cos452&amp;3-research" />
+      <option name="PROGRAM_PARAMETERS" value="--catalog json/examples/testCatalog.json --offerings json/examples/testOfferings.json --plan json/examples/testPlan.json" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="94e88970-77d5-4756-b6c0-0bdee593edb0" name="Default Changelist" comment="" />
+      <created>1619458306003</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1619458306003</updated>
+      <workItem from="1619458313346" duration="865000" />
+      <workItem from="1619493608243" duration="3741000" />
+      <workItem from="1619632947246" duration="638000" />
+      <workItem from="1619881331230" duration="5754000" />
+      <workItem from="1620061574654" duration="18000" />
+      <workItem from="1620692417937" duration="2411000" />
+      <workItem from="1620827619033" duration="81000" />
+      <workItem from="1622241987919" duration="4271000" />
+      <workItem from="1624758964001" duration="4901000" />
+      <workItem from="1624937933641" duration="509000" />
+      <workItem from="1626030341122" duration="15054000" />
+      <workItem from="1626144535619" duration="656000" />
+      <workItem from="1628286145668" duration="605000" />
+      <workItem from="1628368941379" duration="9428000" />
+      <workItem from="1629822864496" duration="27038000" />
+      <workItem from="1629930270081" duration="23892000" />
+    </task>
+    <task id="LOCAL-00001" summary="Started java objects">
+      <created>1619497519425</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1619497519425</updated>
+    </task>
+    <task id="LOCAL-00002" summary="preliminary json serializing and deserializing">
+      <created>1619901942672</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1619901942672</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Finished codifying objects for json serialization/deserailization">
+      <created>1626063505563</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1626063505563</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Fully implemented full plan credits">
+      <created>1629915705234</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1629915705234</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Implemented term context total credit evaluator and added error handling, and changed json format for plans and offerings to use TermYear instead of Term">
+      <created>1629936373282</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1629936373282</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Simplified evaluation by using universal offering iteratable">
+      <created>1629940057323</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1629940057323</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Started java objects" />
+    <MESSAGE value="preliminary json serializing and deserializing" />
+    <MESSAGE value="Finished codifying objects for json serialization/deserailization" />
+    <MESSAGE value="Fully implemented full plan credits" />
+    <MESSAGE value="Implemented term context total credit evaluator and added error handling, and changed json format for plans and offerings to use TermYear instead of Term" />
+    <MESSAGE value="Simplified evaluation by using universal offering iteratable" />
+    <option name="LAST_COMMIT_MESSAGE" value="Simplified evaluation by using universal offering iteratable" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IllegalStateException" package="java.lang" />
+          <option name="timeStamp" value="6" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IllegalArgumentException" package="java.lang" />
+          <option name="timeStamp" value="7" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="exceptions.OfferingException$CourseOfferingLinkingException" package="exceptions" />
+          <option name="timeStamp" value="13" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

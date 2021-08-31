@@ -1,0 +1,56 @@
+@Background143: rgb(106, 41, 41);
+@BackgoundColloquim: rgb(161, 141, 55);
+@BackgroundOther: rgb(13, 31, 125);
+
+
+.color(@color){
+  background-color: @color;
+}
+
+h1{
+  font-family: 'Noto Serif', serif;
+  font-style: emphasis;
+  color: #ff1150 + 2;
+  margin-left: 40px;
+}
+
+body{
+  font-family: 'ZCOOL XiaoWei', serif;
+  background: black;
+  color: white;
+  margin: 0px;
+}
+
+.subject{
+  padding: 5px 30px 5px 30px;
+  margin: 0px;
+
+  p{
+    em{
+      margin-right: 30px;
+      position: absolute;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+    a{
+      color: rgb(110, 185, 255);
+      font-size: 30px;
+      position: relative;
+      left: 100px;
+    }
+  }
+}
+
+#COS143{
+  .color(@Background143);
+  color: white;
+}
+
+#conc{
+  .color(@BackgroundOther);
+}
+
+#colloquium{
+  .color(@BackgoundColloquim)
+}

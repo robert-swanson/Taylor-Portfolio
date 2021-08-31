@@ -1,0 +1,10 @@
+{
+  "uid": "app",
+  "append": true,
+  "watch": true,
+  "script": "app.js",
+  "sourceDir": "/home/ec2-user/cos143-api",
+  "logFile": "/home/ec2-user/cos143-forever.log",
+  "outFile": "/home/ec2-user/cos143-forever-out.log",
+  "errFile": "/home/ec2-user/cos143-forever-error.log"
+}

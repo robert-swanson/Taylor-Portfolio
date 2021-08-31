@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+    document,body{
+      height:100%;
+      width: 100%;
+      margin: 0;
+      font-family: "Helvetica Neue"
+    }
+
+    #form{
+      width: 250px;
+      background-color: white;
+      border-radius: 5px;
+      margin: 1em;
+      padding: 1em;
+    }
+
+    .formRow label{
+      width: 30%;
+      display:inline-block;
+      display: none;
+    }
+
+    .formRow input{
+      width: 95%;
+      border: none;
+      border-bottom: 1px solid #ccc;
+      box-shadow: none;
+      height: 30px;
+      transition: all .2s ease;
+    }
+
+    .formRow button{
+      background: #0b6efd;
+      border: 1px solid #fff;
+      padding: .5em 1.1em;
+      border-radius: .313em;
+      transition: all .4s ease;
+      color: white;
+      display: block;
+      margin: 0 auto;
+      margin-top: 1.4em;
+      width: 80%;
+    }
+
+    .formRow button:hover{
+      background-color: #0c3b7b;
+    }
+
+
+    .invalid{
+      border: 4px red;
+      background-color: orange;
+    }
+
+
+  </style>
+</head>
+<body>
+  <form id="form" action="https://cse.taylor.edu/~cos143/echoForm.php" method="GET">
+
+    <div class="formRow">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" placeholder="Username">
+    </div>
+
+    <div class="formRow">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Password">
+    </div>
+
+    <div class="formRow">
+      <button id="submit">Sign in</button>
+    </div>
+  </form>
+
+<script>
+  var form = document.getElementById("form");
+  var submitButton = document.getElementById("submit");
+  form.addEventListener("submit", function(e){
+    var username = form.username;
+    var password = form.password;
+    if(!username.value){
+      e.preventDefault();
+      username.className = "invalid";
+      // var label = document.querySelector('label[for="username"]')
+    }
+    if(!password.value){
+      e.preventDefault();
+      password.className = "invalid";
+    }
+  })
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "cos143-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": "10.15.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "md5": "^2.2.1",
+    "uuid": "^3.3.2"
+  }
+}

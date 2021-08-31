@@ -1,0 +1,308 @@
+<html>
+<head>
+    <script
+            src="https://code.jquery.com/jquery-3.4.0.min.js"
+            integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+            crossorigin="anonymous"></script>
+    <title>COS143 User API</title>
+</head>
+<body>
+
+<style>
+    html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 4px 0 0 0;
+        font-family: "Helvetica Neue", serif;
+    }
+
+    div.row {
+        width: 100%;
+        margin-bottom: 2em;
+        padding-left: 4px;
+    }
+
+    span {
+        font-size: smaller;
+    }
+
+    pre {
+        margin-top: 4px;
+        margin-left: 8px;
+        padding-left: 8px;
+        background-color: rgba(216, 211, 255, 0.46);
+        min-height: 100px;
+        border-radius: 3px;
+        width: 95%;
+    }
+
+    input {
+        background-color: #ecf1f3;
+        box-shadow: none;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid #e2e2e2;
+    }
+
+    .getter {
+        background-color: #c4ffbc;
+    }
+
+    .putter {
+        background-color: #f7ffd6;
+    }
+
+    .poster {
+        background-color: #c2c1ff;
+    }
+
+    .deleter {
+        background-color: #ffcecf;
+    }
+
+    button {
+        border-radius: 3px;
+        border: none;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+</style>
+
+<div class="row">
+    <p>Get user data.</p>
+    <input id="usernameForGetter" type="text" placeholder="Username">
+    <button class="getter" id="getUserByUsername">GET /api/users</button>
+    <span class="xAuthToken"></span>
+    <pre id="getUserByUsernameResults"></pre>
+</div>
+
+<div class="row">
+    <p>Create a user.</p>
+    <input id="newUsername" type="text" placeholder="Username">
+    <input id="newPassword" type="password" placeholder="Password">
+    <button class="poster" id="postUser">POST /api/users</button>
+    <span class="xAuthToken"></span>
+    <br>
+    <span id="userPostBody"></span>
+    <pre id="postUserResults"></pre>
+</div>
+
+<div class="row">
+    <p>Update a user.</p>
+    <input id="putNewUsername" type="text" placeholder="Username">
+    <input id="putNewPassword" type="password" placeholder="Password">
+    <button class="putter" id="putUser">PUT /api/users</button>
+    <span class="xAuthToken"></span>
+    <br>
+    <span id="userPutBody"></span>
+    <pre id="putUserResults"></pre>
+</div>
+
+<div class="row">
+    <p>Delete a user.</p>
+    <input id="usernameForDelete" type="text" placeholder="Username">
+    <button class="deleter" id="deleteUser">DELETE /api/users/&lt;username&gt;</button>
+    <span class="xAuthToken"></span>
+    <pre id="deleteUserResults"></pre>
+</div>
+
+
+<div class="row">
+    <p>Login a user.</p>
+    <input id="loginUsername" type="text" placeholder="Username">
+    <input id="loginPassword" type="password" placeholder="Password">
+    <button class="poster" id="loginUser">POST /api/sessions</button>
+    <br>
+    <span id="userLoginBody"></span>
+    <pre id="userLoginResults"></pre>
+</div>
+
+<div class="row">
+    <p>Logout user.</p>
+    <button class="deleter" id="logoutUser">DELETE /api/sessions</button>
+    <br>
+    <pre id="userLogoutResults"></pre>
+</div>
+
+<div class="row">
+    <p>Get secrets.</p>
+    <button class="getter" id="getSecrets">GET /api/secrets</button>
+    <span class="xAuthToken"></span>
+    <pre id="getSecretsResults"></pre>
+</div>
+
+
+<div class="row">
+    <p>Create a user (as a form post).</p>
+    <form action="/api/users" method="post">
+        <input name="username" type="text" placeholder="Username">
+        <input name="password" type="password" placeholder="Password">
+        <button class="poster" id="postForm">SUBMIT /api/users</button>
+    </form>
+    <!--<span class="xAuthToken"></span>-->
+    <br>
+    <!--<span id="userPostBody"></span>-->
+    <!--<pre id="postUserResults"></pre>-->
+</div>
+
+</body>
+
+<script type="text/javascript">
+  const host = "";
+  // const host = "http://localhost:3000";
+  let xAuthToken = null;
+
+  $("#getSecrets").on("click", function () {
+    $.ajax({
+      url: host + "/api/secret",
+      method: "GET",
+      dataType: "json",
+      headers: {"X-Auth-Token": xAuthToken}
+    }).done(function (data, status, jqXHR) {
+      $("#getSecretsResults").text(JSON.stringify(data, null, 2))
+    }).fail(function (jqXHR) {
+      $("#getSecretsResults").text(jqXHR.status + " " + jqXHR.statusText + jqXHR.responseText)
+    })
+  });
+
+  const deleteUser = function () {
+    $.ajax({
+      url: host + "/api/users/" + $("#usernameForDelete").val(),
+      method: "DELETE",
+      headers: {"X-Auth-Token": xAuthToken}
+    }).done(function (data, status, jqXHR) {
+      $("#deleteUserResults").text(jqXHR.status + " " + jqXHR.statusText + jqXHR.responseText)
+    }).fail(function (jqXHR) {
+      $("#deleteUserResults").text(jqXHR.status + " " + jqXHR.statusText + jqXHR.responseText)
+    })
+  }
+  $("#deleteUser").on("click", deleteUser);
+  $("#usernameForDelete").on("keyup", function (e) {
+    $("#deleteUser").text("DELETE /api/users/" + $("#usernameForDelete").val())
+
+    if (e.which === 13) {
+      deleteUser();
+    }
+  })
+
+  const getUserByUsername = function () {
+    $.getJSON(host + "/api/users/" + $("input#usernameForGetter").val())
+      .done(function (data) {
+        $("#getUserByUsernameResults").text(JSON.stringify(data, null, 2))
+      })
+      .fail(function (jqXHR) {
+        $("#getUserByUsernameResults").text(jqXHR.status + " " + jqXHR.statusText + jqXHR.responseText);
+      });
+  }
+  $("#getUserByUsername").on("click", getUserByUsername);
+  $("input#usernameForGetter").on("keyup", function (e) {
+    const val = $("input#usernameForGetter").val()
+    $("#getUserByUsername").text("GET /api/users/" + val)
+
+    if (e.which === 13) {
+      getUserByUsername();
+    }
+  });
+
+
+  const postNewUser = function () {
+    $.ajax({
+      url: host + "/api/users",
+      dataType: "json",
+      headers: {"X-Auth-Token": xAuthToken},
+      method: "POST",
+      data: {username: $("#newUsername").val(), password: $("#newPassword").val()}
+    }).done(function (data) {
+      $("#postUserResults").text(JSON.stringify(data, null, 2))
+    }).fail(function (jqXHR) {
+      $("#postUserResults").text(jqXHR.status + " " + jqXHR.statusText + jqXHR.responseText)
+    })
+  };
+  $("#postUser").on("click", postNewUser)
+  $("#newUsername, #newPassword").on("keyup", function (e) {
+    const postObj = {username: $("#newUsername").val(), password: $("#newPassword").val()};
+    $("#userPostBody").text(JSON.stringify(postObj))
+
+    if (e.which === 13) {
+      postNewUser();
+    }
+  })
+
+
+  const putNewUser = function () {
+    $.ajax({
+      url: host + "/api/users/" + $("#putNewUsername").val(),
+      dataType: "json",
+      headers: {"X-Auth-Token": xAuthToken},
+      method: "PUT",
+      data: {username: $("#putNewUsername").val(), password: $("#putNewPassword").val()}
+    }).done(function (data) {
+      $("#putUserResults").text(JSON.stringify(data, null, 2))
+    }).fail(function (jqXHR) {
+      $("#putUserResults").text(jqXHR.status + " " + jqXHR.statusText + jqXHR.responseText)
+    })
+  };
+  $("#putUser").on("click", putNewUser)
+  $("#putNewUsername, #putNewPassword").on("keyup", function (e) {
+    const username = $("#putNewUsername").val()
+    const postObj = {username: username, password: $("#putNewPassword").val()};
+    $("#userPutBody").text(JSON.stringify(postObj))
+    $("#putUser").text("PUT /api/users/" + username)
+
+    if (e.which === 13) {
+      putNewUser();
+    }
+  })
+
+
+  const loginUser = function () {
+    $.ajax({
+      url: host + "/api/sessions",
+      dataType: "json",
+      headers: {"X-Auth-Token": xAuthToken},
+      method: "POST",
+      data: {username: $("#loginUsername").val(), password: $("#loginPassword").val()}
+    }).done(function (data) {
+      $("#userLoginResults").text(JSON.stringify(data, null, 2));
+      xAuthToken = data.sessionId
+      $(".xAuthToken").text("header \"X-Auth-Token\"=" + xAuthToken)
+      $("#logoutUser").text("DELETE /api/sessions/" + xAuthToken)
+    }).fail(function (jqXHR) {
+      $("#userLoginResults").text(jqXHR.status + " " + jqXHR.statusText + jqXHR.responseText)
+    })
+  };
+  $("#loginUser").on("click", loginUser)
+  $("#loginUsername, #loginPassword").on("keyup", function (e) {
+    const postObj = {username: $("#loginUsername").val(), password: $("#loginPassword").val()};
+    $("#userLoginBody").text(JSON.stringify(postObj))
+
+    if (e.which === 13) {
+      loginUser();
+    }
+  })
+
+  const logoutUser = function () {
+    $.ajax({
+      url: host + "/api/sessions/" + xAuthToken,
+      headers: {"X-Auth-Token": xAuthToken},
+      method: "DELETE"
+    }).done(function (data) {
+      $("#userLogoutResults").text(JSON.stringify(data, null, 2));
+      xAuthToken = null
+      $(".xAuthToken").text("header \"X-Auth-Token\"=" + xAuthToken)
+      $("#logoutUser").text("DELETE /api/sessions")
+    }).fail(function (jqXHR) {
+      $("#userLogoutResults").text(jqXHR.status + " " + jqXHR.statusText + jqXHR.responseText)
+    });
+
+  };
+
+  $("#logoutUser").on("click", logoutUser)
+
+</script>
+
+</html>

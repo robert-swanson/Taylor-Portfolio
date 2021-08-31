@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="Python" name="Python">
+      <configuration sdkName="Python 3.9 (dsl)" />
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/java-src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Python 3.9 (dsl) interpreter library" level="application" />
+    <orderEntry type="library" name="com.google.code.gson:gson:2.8.6" level="project" />
+    <orderEntry type="library" name="gnu.getopt:java-getopt:1.0.13" level="project" />
+  </component>
+</module>

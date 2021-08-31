@@ -1,0 +1,9 @@
+{
+    "path" : "~/dev/rswanson/mat311-data_science/HealthData",
+    "sortOrder" : [
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        }
+    ]
+}

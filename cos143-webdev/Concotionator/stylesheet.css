@@ -1,0 +1,43 @@
+*{
+  /* color: rgb(34, 27, 98); */
+  margin-left: 20px;
+}
+#ingredients{
+}
+
+.ingredient{
+  float: left;
+  position: relative;
+  height: 120px;
+  width: 200px;
+  text-align: center;
+  vertical-align: bottom;
+  margin: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  border-radius: 2px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(106, 106, 106);
+}
+
+.ingredient > p{
+  margin: 0px 5px 10px 5px;
+}
+
+.ingredient > p > strong{
+  margin: 0px;
+  font-size: 110%;
+}
+
+.flavor{
+  margin: 0px;
+  color: rgb(104, 36, 196);
+
+}
+
+.flavor > p{
+  margin: 0px;
+  font-style: italic;
+}

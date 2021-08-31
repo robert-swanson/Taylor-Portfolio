@@ -1,0 +1,41 @@
+body{
+  font-family: 'Libre Baskerville', serif;
+}
+#breadcrumb{
+  font-family: 'Times New Roman';
+}
+#glow{
+  text-shadow: 2px 2px 4px rgb(222, 31, 93);
+}
+.color{
+  font-size: 32px;
+}
+#first{
+  background-color: rgb(147, 100, 200);
+}
+#second{
+  background-color: #f087b3;
+}
+#third{
+  background-color: #f08;
+}
+.collumn{
+  color: rgb(53, 47, 122);
+  columns: 3;
+}
+
+.floater{
+  position: fixed;
+  right: 5px;
+  top: 5px;
+  margin: 5px;
+  padding: 5px;
+  background-color: rgb(166, 193, 241);
+}
+
+#feature{
+  background-color: rgb(189, 191, 242);
+}
+#feature:hover{
+  background-color: rgb(230, 217, 244);
+}

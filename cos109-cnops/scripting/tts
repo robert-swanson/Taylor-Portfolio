@@ -1,0 +1,325 @@
+#! /bin/bash
+
+# Import config vars
+.  tts.config
+PRODUCTIVITY=("productive" "prod" "productivity")
+PERSONAL=("personal" "person")
+
+# class=`echo ${CLASS_IDS[0]} | tr a-z' ' A-Z_` #Get option name
+# eval arr=\${${class}[*]} #Get allowed strings
+
+getDuration(){
+  startEntry=`tail -1 "$TIMER" | cut -d ' ' -f 2-4`
+  now=`date +%s`
+  start=`date -j -f '%m/%d/%Y, %I:%M %p' "$startEntry" +%s`
+  minutes=$(((now-start)/60))
+  hours=$((minutes/60))
+  mins=$((minutes%60))
+
+  if [[ $1 = "long" ]]; then
+    if (($hours > 0)); then
+      duration="$((hours)) hours, $((mins)) minutes"
+    else
+      duration=$((mins))m
+    fi
+  else
+    if (($hours > 0)); then
+      duration="$((hours))h $((mins))m"
+    else
+      duration=$((mins))m
+    fi
+  fi
+
+}
+
+startTimer(){
+  time=`date '+%m/%d/%Y, %I:%M %p'`
+  echo In:  "$time">> "$TIMER"
+}
+
+getActivity(){
+  activity="Productivity"
+  input=$(echo $1 | tr A-Z a-z)
+  if [[ $input = "" ]]; then
+    return
+  fi
+  activity="INVALID"
+  for act in ${ACTIVITIES[*]}; do
+      activityCaps=`echo ${act} | tr a-z' ' A-Z_` #Get option name
+      eval activityRef=\${${activityCaps}[*]} #Get allowed strings
+      for ref in ${activityRef[*]}; do
+          lower=$(echo $ref | tr A-Z a-z)
+          if [[ $input = $lower ]]; then
+            activity=$act
+            return
+          fi
+      done
+      if [[ ($input = "productivity") || ($input = "productive") || ($input = "prod") ]]; then
+        activity=Productivity
+        return
+      fi
+      if [[ ($input = "work") || ($input = "working") ]]; then
+        activity=Work
+        return
+      fi
+  done
+}
+
+getClass(){
+  class="Personal"
+  input=$(echo $1 | tr A-Z a-z)
+  if [[ $input = "" ]]; then
+    return
+  fi
+  class="INVALID"
+  for clas in "${CLASSES[@]}"; do
+      classCaps=`echo ${clas} | tr a-z' ' A-Z_` #Get option name
+      eval classRef=\${${classCaps}[*]} #Get allowed strings
+      for ref in ${classRef[*]}; do
+          lower=$(echo $ref | tr A-Z a-z)
+          if [[ $input = $lower ]]; then
+            class=$clas
+            return
+          fi
+      done
+  done
+  for clas in "${JOBS[@]}"; do
+      classCaps=`echo ${clas} | tr a-z' ' A-Z_` #Get option name
+      eval classRef=\${${classCaps}[*]} #Get allowed strings
+      for ref in ${classRef[*]}; do
+          lower=$(echo $ref | tr A-Z a-z)
+          if [[ $input = $lower ]]; then
+            class=$clas
+            return
+          fi
+      done
+  done
+  if [[ ($input = "personal") || ($input = "person") ]]; then
+    class="Personal"
+    return
+  fi
+}
+
+getStartTime(){
+  hourMinute='^([0-9]*)h[ ]?([0-9]*)m$'
+  hour='^([0-9]*)h$'
+  minute='^([0-9]*)m?$'
+  minutes=-1
+  if [[ ($* =~ $hourMinute) ]]; then
+    hours=${BASH_REMATCH[1]}
+    minutes=$(expr $hours \* 60 + ${BASH_REMATCH[2]})
+  else
+    if [[ ($* =~ $hour) ]]; then
+      minutes=$(expr ${BASH_REMATCH[1]} \* 60)
+    else
+      if [[ ($* =~ $minute) ]]; then
+        minutes=${BASH_REMATCH[1]}
+      else
+        echo ERROR
+      fi
+    fi
+  fi
+}
+
+regex='^(-[vsjJcCexX])|(--.*)'
+if [[ !($* = "" || $* =~ $regex) ]]; then
+  >&2 echo Failed: Invalid Command
+  exit 1
+fi
+
+#View
+if [[ ($1 = "") || ($1 = "-v") || ($1 = "--view") ]]; then
+  getDuration
+  echo Started $duration ago at `echo $startEntry | cut -d ' ' -f 2,3`
+fi
+
+#Start Timer
+if [[ ($1 = "-s") || ($1 = "--start") ]]; then
+  startTimer
+fi
+
+#Continue Timer
+if [[ ($1 = "-c") || ($1 = "--continue" )]]; then
+    getStartTime $2 $3
+    if [[ $minutes != "-1" ]]; then
+      seconds=$(expr $minutes \* 60)
+      time=`date -v-${seconds}S '+%m/%d/%Y, %I:%M %p' `
+      echo In:  "$time">> "$TIMER"
+      echo $time
+    fi
+fi
+
+#Continue JSON
+if [[ ($1 = "-C") || ($1 = "--Continue") ]]; then
+    getStartTime $2 $3
+    if [[ $minutes != "-1" ]]; then
+      mins=$(expr $minutes % 60)
+      hours=$(expr $minutes / 60)
+      pretty=""
+      if [[ $hours > 0 ]]; then
+        pretty="${hours}h "
+      fi
+      if [[ $mins > 0 ]]; then
+        pretty="${pretty}${mins}m"
+      fi
+      echo "
+      {\"items\": [{
+        \"uid\": \"continue\",
+        \"title\": \"$pretty\",
+        \"arg\": \"$2 $3\"
+      }]}
+      "
+    fi
+fi
+
+#End Timer
+if [[ ($1 = "-e") || ($1 = "--end") ]]; then
+    # Get Duration
+    getDuration long
+
+    # Get Activity
+    getActivity $2
+    if [[ $activity = "INVALID" ]]; then
+      >&2 echo ERROR: \"$2\" is not a valid activity
+    fi
+
+    # Get Class
+    if [[ $2 = "" ]]; then
+      getClass $2
+      if [[ $class = "INVALID" ]]; then
+        >&2 echo ERROR: \"$2\" is not a valid class
+      fi
+    else
+      getClass $3
+      if [[ $class = "INVALID" ]]; then
+        >&2 echo ERROR: \"$3\" is not a valid class
+      fi
+    fi
+
+    # Continue if valid
+    if [[ $activity != "INVALID" && $class != "INVALID" ]]; then
+      # echo Duration: $duration Activity: $activity Class: $class
+      time=`date '+%m/%d/%Y, %I:%M %p'`
+      echo Out: "$time" >> "$TIMER"
+      echo ${class}-${activity}: ${duration} >> "$TIMER"
+      echo >> "$TIMER"
+      echo "$class;$activity;$(echo $startEntry);${time}" >> "$TIMES"
+      startTimer
+      echo Started $duration ago at `echo $startEntry | cut -d ' ' -f 2,3`
+
+      if [[ $activity = "Work" ]]; then
+        workCaps=`echo ${class} | tr a-z' ' A-Z_` #Get option name
+        name=$(echo ${workCaps}_WAGE)
+        eval wage=\$$name
+
+        income=$(expr $minutes \* $wage / 60)
+        # eval activityRef=\${${activityCaps}[*]} #Get allowed strings
+        dollars=$(expr $income / 100)
+        cents=$(expr $income % 100)
+        echo $(printf "You just earned $%d.%02d" $dollars $cents)
+      fi
+      echo Success
+    else
+      echo Failed
+    fi
+fi
+
+#End JASON (Activity)
+if [[ ($1 = "-j") || ($1 = "-jason") ]]; then
+    echo {\"items\": [
+    for activity in ${ACTIVITIES[*]} Work Productivity; do
+        activityCaps=`echo ${activity} | tr a-z' ' A-Z_` #Get option name
+        eval activityRef=\${${activityCaps}[0]} #Get first allowed string
+
+       echo "
+        {
+        \"uid\": \"$activityRef\",
+        \"title\": \"$activity\",
+        \"arg\": \"$activityRef\",
+        \"autocomplete\": \"$activityRef \",
+        \"icon\": {
+            \"path\": \"$DIR/icons/${activityCaps}.png\"
+        }
+        },
+       "
+    done
+    getDuration
+    info=$(echo Started $duration ago at `echo $startEntry | cut -d ' ' -f 2,3`)
+
+    echo "
+    {
+      \"uid\": \"details\",
+      \"title\": \"Timer Details\",
+      \"arg\": \"\",
+      \"subtitle\": \"$info\",
+      \"autocomplete\": \"Dont Tab Me\",
+      \"icon\": {
+        \"path\": \"$DIR/icons/DURATION.png\"
+       }
+     }
+    "
+    echo ]}
+fi
+
+#End JASON (Class)
+if [[ ($1 = "-J") || ($1 = "--JASON") ]]; then
+  if [[ $2 = "Work" ]]; then
+    echo {\"items\": [
+    for job in "${JOBS[@]}"; do
+        jobCaps=`echo ${job} | tr a-z' ' A-Z_` #Get option name
+        eval jobRef=\${${jobCaps}[0]} #Get allowed strings
+
+        echo "
+        {
+        \"uid\": \"$jobRef\",
+        \"title\": \"$job\",
+        \"arg\": \"$jobRef\",
+        \"autocomplete\": \"$jobRef\"
+        },
+       "
+     done
+  else
+    echo {\"items\": [
+    for class in "${CLASSES[@]}"; do
+        classCaps=`echo ${class} | tr a-z' ' A-Z_` #Get option name
+        eval classRef=\${${classCaps}[0]} #Get allowed strings
+
+        echo "
+        {
+        \"uid\": \"$classRef\",
+        \"title\": \"$class\",
+        \"arg\": \"$classRef\",
+        \"autocomplete\": \"$classRef\"
+        },
+       "
+    done
+    getDuration
+    info=$(echo Started $duration ago at `echo $startEntry | cut -d ' ' -f 2,3`)
+    echo "
+      {
+        \"uid\": \"Personal\",
+        \"title\": \"Personal\",
+        \"arg\": \"Personal\",
+        \"autocomplete\": \"Personal\",
+      }
+      "
+  fi
+  echo ]}
+fi
+
+#Export
+if [[ ($1 = "-x") || ($1 = "--export") ]]; then
+  cat "$TIMES" | tee "$BACKUP" | pbcopy
+  open "$SPREADSHEET"
+  echo "" > "$TIMES"
+  start=$(tail -1 "$TIMER")
+  echo $start
+  echo $start > "$TIMER"
+fi
+
+# Undo Export
+if [[ ($1 = "-X") || ($1 = "--undo") ]]; then
+  back=$(cat "$BACKUP")
+  cat "$TIMES" > "$BACKUP"
+  echo $back > "$TIMES"
+fi
