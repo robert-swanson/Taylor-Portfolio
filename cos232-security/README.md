@@ -1,6 +1,6 @@
 # COS 232 - Computer & Network Security I 
 
-<class redacted from public repo to protect from cheating>
+*class redacted from public repo to protect from cheating*
 
 Instructor: Dr. Dannie M. Stanley 
 

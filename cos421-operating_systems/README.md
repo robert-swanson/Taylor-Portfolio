@@ -1,6 +1,6 @@
 # COS 421: Operating Systems
 
-<class redacted from public repo to protect from cheating>
+*class redacted from public repo to protect from cheating*
 
 Instructor: Dr. Jonathan Geisler
 

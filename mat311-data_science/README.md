@@ -1,6 +1,6 @@
 # MAT 311: Introduction to Data Science
 
-<class redacted from public repo to protect from cheating>
+*class redacted from public repo to protect from cheating*
 
 Instructor: Dr. Mandi Maxwell
 

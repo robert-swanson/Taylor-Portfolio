@@ -1,6 +1,6 @@
 # SYS 411 Machine Learning
 
-<class redacted from public repo to protect from cheating>
+*class redacted from public repo to protect from cheating*
 
 Instructor: Dr. Art White
 

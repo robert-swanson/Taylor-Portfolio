@@ -1,6 +1,6 @@
 # COS 265: Data Structures & Algorithms
 
-<class redacted from public repo to protect from cheating>
+*class redacted from public repo to protect from cheating*
 
 Instructor: Dr. Jonathan Denning
 

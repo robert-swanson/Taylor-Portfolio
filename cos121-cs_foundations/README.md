@@ -1,6 +1,6 @@
 # COS 121 Foundations of Computer Science
 
-<class redacted from public repo to protect from cheating>
+*class redacted from public repo to protect from cheating*
 
 Hours: 4
 
