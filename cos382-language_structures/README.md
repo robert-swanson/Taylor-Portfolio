@@ -18,7 +18,7 @@ Homework Time: 102 hours
 
 ## Assignments
 
-### [Preference Specification Language DSL](https://repo.cse.taylor.edu/rswanson/dsl)
+### [Preference Specification Language DSL](./dsl)
 
 Homework Time: 52 hours
 

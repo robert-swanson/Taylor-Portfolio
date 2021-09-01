@@ -1,0 +1,3 @@
+[submodule "cos382-language_structures/dsl"]
+	path = cos382-language_structures/dsl
+	url = https://repo.cse.taylor.edu/rswanson/dsl
