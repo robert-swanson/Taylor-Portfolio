@@ -18,7 +18,7 @@ Homework Time: 102 hours
 
 ## Assignments
 
-### [Preference Specification Language DSL](./dsl)
+### [Preference Specification Language DSL](./dsl-prototype)
 
 Homework Time: 52 hours
 
