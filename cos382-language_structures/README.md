@@ -18,7 +18,7 @@ Homework Time: 102 hours
 
 ## Assignments
 
-### [Preference Specification Language DSL](./dsl-prototype)
+### [Preference Specification Language DSL](https://github.com/robert-swanson/Preference-Specification-Language/tree/d3a2c2aeca26a83824b34038adfa88acdb3a7912)
 
 Homework Time: 52 hours
 
