@@ -1,7 +1,7 @@
 # Undergraduate Portfolio for Robert Swanson
 Email: *robert_swanson@taylor.edu*
 
-This repository is the public version of a private repo containing all of my classwork. Many classes are redacted so that their solutions are not publicly available on the internet. If you are interested in accessing the full repo, please send me an email.
+This repository is kept private because it contains solutions to homework problems.
 
 ## Courses
 
@@ -14,11 +14,16 @@ This repository is the public version of a private repo containing all of my cla
 - [COS 280: Introduction to Artificial Intelligence](./cos280-intro_to_ai)
 - [COS 284: Introduction to Computer Systems](./cos284-intro_to_comp_systems)
 - [COS 331: Data Communications](./cos331-datacom)
+- [COS 340: Software Engineering](https://repo.cse.taylor.edu/group-work/horse)
+- [COS 343: Database Systems](./cos343-database_systems)
 - [COS 370: Blockchain](./cos370-blockchain)
+- [COS 381: Computer Architecture](./cos381-computer_architecture)
 - [COS 382: Language Structures](./cos382-language_structures)
 - [COS 421: Operating Systems](./cos421-operating_systems)
+- [COS 432: Software Reverse Engineering](./cos432-software_reverse_engineering)
+- [COS 435: Theory of Computation](./cos435-theory_of_computation/)
 - [COS 436: Parallel and Distributed Computing](./cos436-parallel_and_distributed_computing)
-- [COS 452 & 453: Research 1 & 2](./cos452&3-research)
+- [COS 452 & 453: Research 1 & 2](https://github.com/robert-swanson/Four-Year-Plan-Evaluation-System)
 - [MAT 311: Introduction to Data Science](./mat311-data_science)
 - [SYS 411: Machine Learning](./sys411-machine_learning)
 

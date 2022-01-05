@@ -1,0 +1,155 @@
+{
+  "halt": {
+    "format": "halt"
+  },
+  "add": {
+    "format": "R",
+    "opcode": "0110011",
+    "func3": "000",
+    "func7": "0000000"
+  },
+  "slt": {
+    "format": "R",
+    "opcode": "0110011",
+    "func3": "010",
+    "func7": "0000000"
+  },
+  "and": {
+    "format": "R",
+    "opcode": "0110011",
+    "func3": "111",
+    "func7": "0000000"
+  },
+  "or": {
+    "format": "R",
+    "opcode": "0110011",
+    "func3": "110",
+    "func7": "0000000"
+  },
+  "xor": {
+    "format": "R",
+    "opcode": "0110011",
+    "func3": "100",
+    "func7": "0000000"
+  },
+  "sll": {
+    "format": "R",
+    "opcode": "0110011",
+    "func3": "001",
+    "func7": "0000000"
+  },
+  "srl": {
+    "format": "R",
+    "opcode": "0110011",
+    "func3": "101",
+    "func7": "0000000"
+  },
+  "sub": {
+    "format": "R",
+    "opcode": "0110011",
+    "func3": "000",
+    "func7": "0100000"
+  },
+  "sra": {
+    "format": "R",
+    "opcode": "0110011",
+    "func3": "101",
+    "func7": "0100000"
+  },
+
+  "addi": {
+    "format": "I",
+    "opcode": "0010011",
+    "func3": "000"
+  },
+  "slti": {
+    "format": "I",
+    "opcode": "0010011",
+    "func3": "010"
+  },
+  "andi": {
+    "format": "I",
+    "opcode": "0010011",
+    "func3": "111"
+  },
+  "ori": {
+    "format": "I",
+    "opcode": "0010011",
+    "func3": "110"
+  },
+  "xori": {
+    "format": "I",
+    "opcode": "0010011",
+    "func3": "100"
+  },
+  "slli": {
+    "format": "I",
+    "opcode": "0010011",
+    "func3": "001",
+    "func7": "0000000"
+  },
+  "srli": {
+    "format": "I",
+    "opcode": "0010011",
+    "func3": "101",
+    "func7": "0000000"
+  },
+  "srai": {
+    "format": "I",
+    "opcode": "0010011",
+    "func3": "101",
+    "func7": "0100000"
+  },
+  "jalr": {
+    "format": "I",
+    "opcode": "1100111",
+    "func3": "000"
+  },
+  "lw": {
+    "format": "I",
+    "opcode": "0000011",
+    "func3": "010"
+  },
+
+  "sw": {
+    "format": "S",
+    "opcode": "0100011",
+    "func3": "010"
+  },
+
+
+  "beq": {
+    "format": "SB",
+    "opcode": "1100011",
+    "func3": "000"
+  },
+  "bne": {
+    "format": "SB",
+    "opcode": "1100011",
+    "func3": "001"
+  },
+  "blt": {
+    "format": "SB",
+    "opcode": "1100011",
+    "func3": "100"
+  },
+  "bge": {
+    "format": "SB",
+    "opcode": "1100011",
+    "func3": "101"
+  },
+
+  "lui": {
+    "format": "U",
+    "opcode": "0110111"
+  },
+  "auipc": {
+    "format": "U",
+    "opcode": "0010111"
+  },
+
+  "jal": {
+    "format": "UJ",
+    "opcode": "1101111"
+  }
+}
