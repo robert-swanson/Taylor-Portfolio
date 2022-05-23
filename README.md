@@ -1,7 +1,9 @@
 # Undergraduate Portfolio for Robert Swanson
-Email: *robert_swanson@taylor.edu*
+Email: *robert_swanson@taylor.edu* | *rswanson3141@gmail.com*
 
-This repository is kept private because it contains solutions to homework problems.
+The complete version of this repository is kept private because it contains solutions to homework problems. Please email me if you would like access to the complete repo.
+
+README files will note what projects have been redacted.
 
 ## Courses
 
